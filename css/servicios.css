@@ -1,0 +1,74 @@
+body {
+    background-color: #fafbae; /* Color madre Amarrillo */
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Marca de agua con logo o patrón */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../media/imagenes/isologo1_transparente.png'); /* Canil logo */
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 150px 150px;
+    opacity: 0.05;  /* Muy sutil */
+    z-index: -1;
+    pointer-events: none;
+}
+
+.acceso-main {
+  display: flex;
+  justify-content: center;     /* centra horizontalmente */
+  align-items: center;         /* centra verticalmente */
+  min-height: 60vh;            /* altura visual agradable */
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fdf6f0;   /* tono madre perla */
+}
+
+/* Sección de contenido */
+.acceso-main section h3 {
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* Enlaces */
+.acceso-main a {
+  text-decoration: none;
+  color: #00bfff;              /* azul celeste */
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover con brillo */
+.acceso-main a:hover {
+  color: #008ccc;
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.6);
+}
+
+/* Texto intermedio */
+.acceso-main span {
+  color: #555;
+}
+
+/* 📱 Versión responsiva */
+@media (max-width: 768px) {
+  .acceso-main section h3 {
+    font-size: 1.2rem;
+    padding: 0 15px;
+  }
+
+  .acceso-main span {
+    display: block; /* El texto baja a otra línea */
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,117 @@
+body {
+    background-color: #FDF6F0; /* Color madre perla */
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Marca de agua con logo o patrón */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../media/imagenes/isologo1_transparente.png'); /* Canil logo */
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 150px 150px;
+    opacity: 0.05;  /* Muy sutil */
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Layout de 3 columnas */
+.main-contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;           /* Espacio entre columnas */
+    padding: 20px;
+    flex-wrap: wrap;     /* Permite que se ajuste en pantallas pequeñas */
+}
+
+/* Columna izquierda */
+.columna-izquierda {
+    flex: 1 1 20%;       /* Crece y se encoge, base 20% */
+    min-width: 200px;    /* Evita que sea demasiado pequeña */
+}
+
+/* Columna central */
+.columna-central {
+    flex: 2 1 50%;       /* Crece el doble que los laterales */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;     /* Permite que las imágenes se acomoden en filas si la pantalla es pequeña */
+}
+
+/* Imagen destacada con overlay */
+.imagen-destacada {
+    position: relative;
+    width: 45%;          /* Cada imagen ocupa menos de la mitad de la sección central */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.imagen-destacada img {
+    width: 100%;
+    display: block;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.imagen-destacada:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Texto sobre la imagen */
+.texto-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    pointer-events: none;
+}
+
+/* Columna derecha */
+.columna-derecha {
+    flex: 1 1 20%;
+    min-width: 200px;
+}
+
+/* Ajustes para iframe */
+.columna-derecha iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;   /* Mantiene proporción */
+}
+
+/* Responsivo: apilar columnas en pantallas pequeñas */
+@media (max-width: 1000px) {
+    .main-contenido {
+        flex-direction: column;
+    }
+
+    .columna-izquierda,
+    .columna-central,
+    .columna-derecha {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .columna-central {
+        justify-content: center;
+    }
+
+    .imagen-destacada {
+        width: 80%;          /* Imágenes más grandes en móviles */
+        margin: 10px auto;
+    }
+}

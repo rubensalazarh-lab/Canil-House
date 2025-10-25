@@ -1,0 +1,86 @@
+body {
+    background-color: #ccffca; /* verde pera */
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Marca de agua con logo o patrón */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../media/imagenes/isologo1_transparente.png'); /* Canil logo */
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 150px 150px;
+    opacity: 0.05;  /* Muy sutil */
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Contenedor principal */
+.sobre-nosotros {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Sección de texto (izquierda) */
+.sobre-nosotros .texto {
+  flex: 0 0 70%;
+  text-align: center;
+}
+
+/* Sección del mapa (derecha) */
+.sobre-nosotros .mapa {
+  flex: 0 0 30%;
+  text-align: center;
+}
+
+/* Subtítulos */
+.sobre-nosotros h2,
+.sobre-nosotros h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Párrafos */
+.sobre-nosotros p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Mapa */
+.sobre-nosotros iframe {
+  width: 100%;
+  height: 350px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+/* 📱 Versión responsiva */
+@media (max-width: 900px) {
+  .sobre-nosotros {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre-nosotros .texto,
+  .sobre-nosotros .mapa {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .sobre-nosotros iframe {
+    height: 300px;
+  }
+}
