@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilo_general.css">
+    <link rel="stylesheet" href="../css/mensajes_opinion.css">
     <link rel="icon" href="../media/imagenes/isologo1.ico" />
     <title> Inicio_Canil_House</title>
 </head>
@@ -19,7 +20,7 @@
         </section>
         <section class="titulo-imagen">
             <div class="contenedor-logo">
-                <img src="../media/imagenes/isologo1.png" alt="Isologo Canil House" class="imagen-logo">
+                <img src="../media/imagenes/isologo1_transparente.png" alt="Isologo Canil House" class="imagen-logo">
             </div>
             <div class="forma-fondo"></div>
             <h1 class="titulo">CANIL HOUSE</h1>
@@ -44,36 +45,36 @@
                 <li><a href="../pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <!--<video controls poster="./media/imagenes/isologo1.png" preload="metadata" autoplay width="400" height="400">
-<source src="./media/videos/tobias.mp4" type="video/mp4">
-</video>-->
     </header>
-    <nav></nav>
     <main>
-        <section>
-            <h2>Sección de Comentarios de nuestros usuarios:</h2>                               
-            <form action="https://formspree.io/f/mnqkwrjd" method="POST"> 
+        <section class="comentarios">
+            <h2>Sección de Comentarios de nuestros usuarios</h2>
+            <form action="https://formspree.io/f/mnqkwrjd" method="POST" class="form-comentarios">
                 <fieldset>
-                    <legend>Ingrese Los datos Requeridos</legend>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre" required> 
-                    <input type="text" id="apellido" name="apellido" placeholder="Ingrese su Apellido" required>
-                    <input type="email" id="email" name="email" placeholder="Email de usuario" required> 
-                    <br> 
-                    <textarea id="mensajes_opinion" rows="4" cols="50" placeholder="Ingrese su mensaje" required></textarea> 
-                    <br>
-                    <button type="submit">Enviar</button>
-                    <button type="reset">Limpiar</button>
-                    <button type="submit">Cancelar</button>
+                    <legend class="encabezado_fieldset">Ingrese los datos requeridos</legend>
+                    <br />
+                    <br />
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+                    <label for="mensajes_opinion">Mensaje / Opinión</label>
+                    <textarea id="mensajes_opinion" name="mensajes_opinion" rows="5" placeholder="Ingrese su mensaje" required></textarea>
+                    <div class="botones">
+                        <button type="submit" class="btn enviar">Enviar</button>
+                        <button type="reset" class="btn limpiar">Limpiar</button>
+                        <button type="button" class="btn cancelar" onclick="window.location.href='../index.html'">Cancelar</button>
+                    </div>
                 </fieldset>
             </form>
-
         </section>
     </main>
     <footer>
         <section>
             <br />
-            <br />
-            <h3> <a href="../formularios/mensajes_opinion.html">Dejanos tu comentario</a> </h3>       
+            <br />     
         </section>
         <section>
             <p>© 2025 Canil House. Todos los derechos reservados.</p>

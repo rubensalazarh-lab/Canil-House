@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/estilo_general.css">
+    <link rel="stylesheet" href="../css/estilo_general.css ">
+    <link rel="stylesheet" href="../css/registro.css">
     <link rel="icon" href="../media/imagenes/isologo1.ico" />
     <title> Inicio_Canil_House</title>
 </head>
@@ -19,7 +20,7 @@
         </section>
         <section class="titulo-imagen">
             <div class="contenedor-logo">
-                <img src="../media/imagenes/isologo1.png" alt="Isologo Canil House" class="imagen-logo">
+                <img src="../media/imagenes/isologo1_transparente.png" alt="Isologo Canil House" class="imagen-logo">
             </div>
             <div class="forma-fondo"></div>
             <h1 class="titulo">CANIL HOUSE</h1>
@@ -44,45 +45,61 @@
                 <li><a href="../pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <video controls poster="./media/imagenes/isologo1.png" preload="metadata" autoplay width="400" height="400">
-<source src="./media/videos/tobias.mp4" type="video/mp4">
-</video>
     </header>
-    <nav></nav>
     <main>
-        <section>
-            <h2>Formulario de Registro</h2>
-            <form action="https://formspree.io/f/mnqkwrjd" method="POST"> 
-                <fieldset>
-                    <legend>Datos Basicos</legend>
-                    <label for="nombre"> Nombre: </label>
-                    <input type="text" id="nombre" name="nombre" required> 
-                    </label><br> 
-                    <label for="apellido"> Apellido: 
-                    <input type="text" id="apellido" name="apellido" required> 
-                    </label><br> 
-                    <label for="email"> Email: 
-                    <input type="email" id="email" name="email" required> 
-                    </label><br> 
-                    <button type="submit">Enviar</button>
-                    <button type="reset">Limpiar</button>
-                    <button type="submit">Cancelar</button>
-                </fieldset>
-                <fieldset>
-                    <legend>Datos de Seguridad</legend>
-                    <label for="contraseña"> Contraseña: 
-                    <input type="password" id="contraseña" name="contraseña" required> 
-                    </label><br>
-                    <label for="repetir_contraseña"> Repita la contraseña Contraseña: 
-                    <input type="password" id="repetir_contraseña" name="repetir_contraseña" required> 
-                    </label><br>
-                </fieldset>
+        <section class="registro">
+            <h2>Registro de Usuario</h2>
+                <form action="https://formspree.io/f/mnqkwrjd" method="POST" class="form-registro">
+                    <!-- Fieldset 1 -->
+                    <fieldset>
+                        <legend class="encabezado_fieldset">Datos Básicos</legend>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="Ingrese su correo" required>
+                    </fieldset>
+                    <!-- Fieldset 2 -->
+                    <fieldset>
+                        <legend class="encabezado_fieldset">Datos de Seguridad</legend>
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" id="contraseña" name="contraseña" placeholder="Cree una contraseña" required>
+                        <label for="repetir_contraseña">Repetir contraseña</label>
+                        <input type="password" id="repetir_contraseña" name="repetir_contraseña" placeholder="Repita la contraseña" required>
+                    </fieldset>
+                    <!--botonera-->
+                        <div class="botones">
+                            <button type="submit" class="btn enviar">Enviar</button>
+                            <button type="reset" class="btn limpiar">Limpiar</button>
+                            <button type="button" class="btn cancelar" onclick="window.location.href='../index.html'">Cancelar</button>
+                        </div>
 
-            </form>
-
+                </form>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <section>
+            <br />
+            <br />      
+        </section>
+        <section>
+            <p>© 2025 Canil House. Todos los derechos reservados.</p>
+        </section>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/CanilHouse" target="_blank">
+                <img src="../media/imagenes/facebook.png" alt="Facebook" class="icono-redes">
+            </a>
+            <a href="https://www.instagram.com/CanilHouse" target="_blank">
+                <img src="../media/imagenes/instagram.png" alt="Instagram" class="icono-redes">
+            </a>
+            <a href="" target="_blank">
+                <img src="../media/imagenes/whatsapp.png" alt="Whatsapp" class="icono-redes">
+            </a>
+        </div>
+        <br />
+        <br />
+    </footer>
 </body>
 </html>
 
