@@ -22,8 +22,10 @@
             <div class="contenedor-logo">
                 <img src="../media/imagenes/isologo1_transparente.png" alt="Isologo Canil House" class="imagen-logo">
             </div>
-            <div class="forma-fondo"></div>
-            <h1 class="titulo">CANIL HOUSE</h1>
+            <div class="forma-fondo">
+                <h1 class="titulo">CANIL HOUSE</h1>
+            </div>
+            
             <div class="iconos">
                 <span class="icono lupa">
                     <img src="../media/imagenes/logo_lupa.png" alt="Buscar">
@@ -32,7 +34,10 @@
                     <img src="../media/imagenes/logo_usuario.png" alt="Usuario">
                 </span>
                 <span class="icono carrito">
-                    <img src="../media/imagenes/logo_carrito.png" alt="Carrito">
+                    <a href="../pages/carrito.html">
+                        <img src="../media/imagenes/logo_carrito.png" alt="Carrito">
+                        <span class="badge-carrito" id="badge-carrito">0</span>
+                    </a>
                 </span>
              </div>
         </section>
@@ -57,11 +62,17 @@
         <section class="texto">
             <h2>Sobre Nosotros</h2>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam adipisci, eaque, voluptates eveniet maxime incidunt in dolor eligendi voluptas blanditiis consectetur earum officiis quia possimus aspernatur ab aliquid ut mollitia labore facere sunt cum ipsa.
+                    Este es un lugar donde puedes encontrar productos para tu amigo canino, ademas de tener acceso a productos a buen precio la principal mision de Canil House es brindar asistencia y servicios para el bienestar de tu mascota.
                 </p>
+                <br />
                 <p>
-                    Officia quo, voluptatem vitae dicta fuga exercitationem saepe fugiat. Facere reprehenderit dolor architecto fugiat nostrum.
+                    Para tener acceso a estos servicios deberas logearte, llenar un formulario y definir que perfil o que perfiles deseas tener ya que puedes ser un colaborador en acciones de rescate y estadia temporaria de amigos caninos que necesitan de nosotros o bien puedes adoptar, tambien podras colocar perfiles de cachorros o perros rescatados para que otros usuarios los elijan en adopcion.
                 </p>
+                <br />
+                <p> 
+                    En nuestra seccion servicios podras logearte o registrarte y acceder a toda nuestra gama de servicios o solicitar asistencia en nuestra seccion creada para tal fin. No te olvides de dejarnos tus comentarios son muy importantes para seguir creciendo.
+                </p>
+                    
         </section>
         <section class="mapa">
             <h3>Ubícanos en:</h3>
@@ -91,5 +102,7 @@
         <br />
         <br />
     </footer>
+    <script src="../js/inicializar_carrito.js"></script>
+    <script src="../js/menu_activo.js"></script>
 </body>
 </html>

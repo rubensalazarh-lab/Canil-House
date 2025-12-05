@@ -22,8 +22,10 @@
             <div class="contenedor-logo">
                 <img src="../media/imagenes/isologo1_transparente.png" alt="Isologo Canil House" class="imagen-logo">
             </div>
-            <div class="forma-fondo"></div>
-            <h1 class="titulo">CANIL HOUSE</h1>
+            <div class="forma-fondo">
+                <h1 class="titulo">CANIL HOUSE</h1>
+            </div>
+            
             <div class="iconos">
                 <span class="icono lupa">
                     <img src="../media/imagenes/logo_lupa.png" alt="Buscar">
@@ -32,7 +34,10 @@
                     <img src="../media/imagenes/logo_usuario.png" alt="Usuario">
                 </span>
                 <span class="icono carrito">
-                    <img src="../media/imagenes/logo_carrito.png" alt="Carrito">
+                    <a href="../pages/carrito.html">
+                        <img src="../media/imagenes/logo_carrito.png" alt="Carrito">
+                        <span class="badge-carrito" id="badge-carrito">0</span>
+                    </a>
                 </span>
              </div>
         </section>
@@ -42,7 +47,7 @@
                 <li><a href="../pages/sobre_nosotros.html">Sobre Nosotros</a></li>
                 <li><a href="../pages/servicios.html">Servicios</a></li>
                 <li><a href="../pages/galeria.html">Productos</a></li>
-                <li><a href="../pages/contacto.html">Contacto</a></li>
+                <li><a href="../pages/asistencia.html">Asistencia</a></li>
             </ul>
         </nav>
     </header>
@@ -87,6 +92,7 @@
         <br />
         <br />
     </footer>
+    <script src="../js/inicializar_carrito.js"></script>
 </body>
 </html>
 

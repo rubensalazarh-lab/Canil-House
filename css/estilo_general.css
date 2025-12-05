@@ -80,7 +80,7 @@ box-sizing: border-box;
   background-color: #e0e0e0; /* gris claro */
   left: 50%;           /* centrar aproximado */
   top: 50%;
-  /* alternativo: usar clip-path si quieres más control */
+  /* alternativo: usar clip-path para más control */
   transform: translate(-50%, -50%) skew(-15deg); /* efecto de paralelogramo alargado */
   z-index: 0;
 }
@@ -251,6 +251,14 @@ box-sizing: border-box;
   }
 }
 
+/* --- ESTILO DEL LINK ACTIVO EN EL MENÚ --- */
+nav.navegacion a.activo {
+    color: white !important;
+    font-weight: bold;
+    background-color: #555; /* Si querés que el fondo cambie también */
+    border-radius: 5px;
+}
+
 
 
 /* Contenedor del video */
@@ -334,3 +342,4 @@ box-sizing: border-box;
         height: 25px;
     }
 }
+
